@@ -32,10 +32,10 @@ public final class SimpleIT {
 
         if (SystemUtils.IS_OS_WINDOWS) {
             System.setProperty(
-              "webdriver.gecko.driver", "src/test/resources/geckodriver.exe");
+              "webdriver.gecko.driver", "src/test/resources/wires.exe");
         } else {
             System.setProperty(
-              "webdriver.gecko.driver", "src/test/resources/geckodriver");
+              "webdriver.gecko.driver", "src/test/resources/wires");
         }
 
 
