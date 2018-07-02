@@ -10,7 +10,7 @@
   <url>http://maven.apache.org</url>
 
   <prerequisites>
-    <maven>3.0.1</maven>
+    <maven>3.5.1</maven>
   </prerequisites>
 
   <properties>
@@ -18,17 +18,12 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <pmd.version>3.9.0</pmd.version>
     <checkstyle.version>3.0.0</checkstyle.version>
-    <spring.version>4.2.4.RELEASE</spring.version>
-    <spring-security-version>3.2.5.RELEASE</spring-security-version>
-    <cucumber.version>1.2.5</cucumber.version>
-    <selenium.version>3.4.0</selenium.version>
-    <surefire.version>2.20</surefire.version>
-    <hibernate.version>5.1.0.Final</hibernate.version>
+    <selenium.version>3.13.0</selenium.version>
+    <surefire.version>2.22.0</surefire.version>
     <junit.version>4.12</junit.version>
-    <hsqldb.version>2.3.3</hsqldb.version>
-    <jetty.version>9.3.14.v20161028</jetty.version>
-    <maven.version>3.5</maven.version>
-    <java.target>1.8</java.target>
+    <maven.version>3.5.2</maven.version>
+    <mavencompiler.version>3.7.0</mavencompiler.version>
+    <java.target>1.10</java.target>
   </properties>
 
   <build>
@@ -37,12 +32,12 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.1</version>
+        <version>${mavencompiler.version}</version>
         <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
-          <testSource>1.8</testSource>
-          <testTarget>1.8</testTarget>
+          <source>${java.target}</source>
+          <target>${java.target}</target>
+          <testSource>${java.target}</testSource>
+          <testTarget>${java.target}</testTarget>
         </configuration>
       </plugin>
       <plugin>
