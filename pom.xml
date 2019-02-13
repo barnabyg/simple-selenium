@@ -22,24 +22,23 @@
     <surefire.version>2.22.0</surefire.version>
     <junit.version>4.12</junit.version>
     <maven.version>3.5.2</maven.version>
-    <mavencompiler.version>3.7.0</mavencompiler.version>
     <java.target>1.10</java.target>
+    <mavencompiler.version>3.8.0</mavencompiler.version>
   </properties>
 
   <build>
     <finalName>simple-selenium</finalName>
     <plugins>
+
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>${mavencompiler.version}</version>
         <configuration>
-          <source>${java.target}</source>
-          <target>${java.target}</target>
-          <testSource>${java.target}</testSource>
-          <testTarget>${java.target}</testTarget>
+          <release>10</release>
         </configuration>
       </plugin>
+
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-failsafe-plugin</artifactId>
